@@ -68,7 +68,9 @@
                                         <div class="col-sm-2">
                                             <select class="form-control show-tick" name="driver2" >
                                                 <option value="{{$trips->driver2_id}}" >-- Select Driver 2 --</option>
-
+                                                @foreach($staffs as $staff)
+                                                    <option value="{{$staff->id}}" selected="{{$staff->name}}" required >{{$staff->name}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         <div class="col-md-2">

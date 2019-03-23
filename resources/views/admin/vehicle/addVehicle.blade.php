@@ -80,7 +80,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <input type="text" name="seat" class="form-control" placeholder="Seat"  autofocus>
+                                                    <input type="number" name="seat" class="form-control" placeholder="Seat"  autofocus>
                                                 </div>
                                             </div>
                                         </div>

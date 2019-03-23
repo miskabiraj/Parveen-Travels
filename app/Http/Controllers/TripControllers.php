@@ -78,20 +78,19 @@ class TripControllers extends Controller
      $this->validate(request(),[
             'vehicle_no'=>'required',
             'driver1'=>'required',
-            'starting_km'=>'required|numeric',
-            'ending_km'=>'required|numeric',
+            'starting_km'=>'required',
+            'ending_km'=>'required',
             'from_place'=>'required',
-            'to_place'=>'required',
-            'address'=>'required',        
+            'to_place'=>'required',    
 
         ]);
        
         $trips = Trip::FindorFail($id);
         $trips->date = request()->date;
-        $trips->vehicle_no = request()->vehicle_no;
-        $trips->driver1 = request()->driver1;
-        $trips->driver2 = request()->driver2;
-        $trips->coach_attends = request()->coach_attends;
+        $trips->vehicle_id = request()->vehicle_no;
+        $trips->driver1_id = request()->driver1;
+        $trips->driver2_id = request()->driver2;
+        $trips->coach_attends_id = request()->coach_attends;
         $trips->startKm = request()->starting_km;
         $trips->endKm = request()->ending_km;
         $trips->totalKm = request()->total_km;
